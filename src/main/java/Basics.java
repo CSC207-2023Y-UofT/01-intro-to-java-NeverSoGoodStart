@@ -17,21 +17,7 @@
  */
 public class Basics {
 
-    /**
-     *  2. In Python, we could have code in a block labelled:
-     *        if __name__ == '__main__':
-     *            # Code goes in here
-     *    However in Java, the equivalent is the main method:
-     *        public static void main(final String[] args){
-     *            // Code goes in here
-     *        }
-     *
-     *    When you run this file (Basics.java), the code within the main
-     *    method is run.
-     *
-     *    (Relevant reading: 1.1.2. Defining methods)
-     */
-    public static void main(final String[] args) {
+   public static void main(final String[] args) {
         /* 3. In Python, we could print out code using the print() function.
          *    In Java, we do the same thing by using System.out.println();
          *    In the line below, we print the result of 7 + 5
@@ -63,7 +49,9 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-        int my_variable = 100;
+        int my_variable;
+        my_variable = 100;
+
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -101,9 +89,8 @@ public class Basics {
          * Current count: 0
          */
         for(int i=10; i>-1; i--){
-            System.out.println("Current count: "+i);
+            System.out.println("Current count:"+" "+i);
         }
-
     }
 
     /**
@@ -143,13 +130,16 @@ public class Basics {
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
          */
-
         StringBuilder ret = new StringBuilder();
         for (int i=0; i<7; i++){
             ret.append(to_split.split(" ")[i].charAt(0));
         }
+
+        // Fill in the rest of the body here
+
         return ret.toString();
     }
+
 
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
@@ -174,7 +164,7 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-        for(int i=1; i< arr.length; i+=2){
+        for (int i=1; i<arr.length; i+=2){
             current_sum+=arr[i];
         }
         return current_sum;
